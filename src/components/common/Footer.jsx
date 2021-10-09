@@ -9,10 +9,18 @@ function Footer() {
             <Container fluid>
                 <Row>
                     <Col xs={12} md={4} className="text-center text-md-start">
-                        <a href="https://vimeo.com/" rel="noopener" className="me-4">
+                        <a  href="https://vimeo.com/" 
+                            rel="noopener" 
+                            className="me-4"
+                            aria-label="Go to our Vimeo page"
+                        >
                             <VimeoIcon />
                         </a>
-                        <a href="https://www.youtube.com/" rel="noopener">
+                        <a  href="https://www.youtube.com/"
+                            rel="noopener" 
+                            className="me-4"
+                            aria-label="Go to our Youtube channel"
+                        >
                             <YouTubeIcon />
                         </a>
                     </Col>
