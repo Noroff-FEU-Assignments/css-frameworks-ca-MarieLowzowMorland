@@ -1,2 +1,7 @@
 @import "~bootstrap/scss/bootstrap.scss";
 @import "./common/layouts.scss";
+
+.px-075{
+  padding-left: ($spacer * .75) !important;
+  padding-right: ($spacer * .75) !important;
+}
