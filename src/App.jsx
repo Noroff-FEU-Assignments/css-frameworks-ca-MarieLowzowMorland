@@ -4,7 +4,7 @@ import HomePage from './components/home/HomePage';
 import ContactPage from './components/contact/ContactPage';
 import NewsPage from './components/news/NewsPage';
 import { pages } from "./components/common/Header";
-import './App.scss';
+import './sass/App.scss';
 
 function PageRoute(props) {
   const { path, exact, children} = props;
