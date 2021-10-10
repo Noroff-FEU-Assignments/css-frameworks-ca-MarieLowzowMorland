@@ -11,31 +11,35 @@ import NavbarBrand from "react-bootstrap/NavbarBrand";
 import NavbarToggle from 'react-bootstrap/NavbarToggle';
 import NavbarCollapse from 'react-bootstrap/NavbarCollapse';
 import Button from "react-bootstrap/Button";
+import InputGroup from "react-bootstrap/InputGroup";
 
 export const pages = {
     HOME: {
         name: "Home",
         path: "/",
+        goTo: () => "/",
         exact: true,
     },
     NEWS: {
         name: "News",
-        path: "/News",
+        path: "/News/:currentPage?",
+        goTo: (number) => number ? "/News/" + number : "/News",
         exact: false,
     },
     CONTACT: {
         name: "Contact",
         path: "/Contact",
+        goTo: () => "/Contact",
         exact: false,
     }
 }
 
 function Link(props) {
-    const { name, path, exact} = props.page;
+    const { name, goTo, exact} = props.page;
 
     return (
         <NavItem as="li">
-            <NavLink exact={exact} to={path} activeClassName="active" className="nav-link">{name}</NavLink>
+            <NavLink exact={exact} to={goTo()} activeClassName="active" className="nav-link">{name}</NavLink>
         </NavItem>
     );
 }
@@ -54,11 +58,13 @@ function Header() {
                             <Link page={pages.CONTACT}/>
                         </Nav>
                         <Form className="d-flex">
-                            <FormGroup controlId="nav-search">
-                                <FormLabel visuallyHidden>Search</FormLabel>
-                                <FormControl type="text" placeholder="Search"/>
-                            </FormGroup>
-                            <Button type="submit">Go</Button>
+                            <InputGroup className="mb-2 full-width d-flex">
+                                <FormGroup controlId="nav-search">
+                                    <FormLabel visuallyHidden>Search</FormLabel>
+                                    <FormControl type="text" placeholder="Search"/>
+                                </FormGroup>
+                                <Button type="submit">Go</Button>
+                            </InputGroup>
                         </Form>
                     </NavbarCollapse>
                 </Container>

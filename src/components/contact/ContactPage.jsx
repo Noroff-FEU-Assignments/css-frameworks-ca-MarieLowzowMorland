@@ -20,16 +20,16 @@ function ContactPage() {
                 <Col xs={12} md={{span:6,order:1}}>
                     <div className="px-075">
                         <h2 className="visually-hidden">Contact us</h2>
-                        <Row className="gx-0 gy-3">
-                            <Col xs={12}>
+                        <Row xs={1} className="gx-0 gy-3">
+                            <Col>
                                 <EnvelopeIcon/>
                                 <a href="mailto:hello@yay.com" className="ms-4">hello@yay.com</a>
                             </Col>
-                            <Col xs={12}>
+                            <Col>
                                 <PhoneIcon/>
                                 <p className="ms-4 d-inline-block">123 456 7890</p>
                             </Col>
-                            <Col xs={12}>
+                            <Col>
                                 <MapMarkerIcon/>
                                 <p className="ms-4 d-inline-block align-top">123 Some Street<br/>Somewhere<br/>Some City<br/>10000</p>
                             </Col>
@@ -54,7 +54,7 @@ function ContactPage() {
                         <FormGroup className="mb-3" controlId="formWebsite">
                             <FormLabel>Website</FormLabel>
                             <InputGroup className="mb-2">
-                                <span className="input-group-text">https://</span>
+                                <InputGroup.Text>https://</InputGroup.Text>
                                 <FormControl type="text" />
                             </InputGroup>
                         </FormGroup>

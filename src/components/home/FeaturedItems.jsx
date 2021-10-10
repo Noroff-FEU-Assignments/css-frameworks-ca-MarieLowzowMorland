@@ -11,6 +11,7 @@ import Container from 'react-bootstrap/Container';
 import retroTvTab from'../../images/tab/tab-1.jpg';
 import retroPictureWallTab from'../../images/tab/tab-2.jpg';
 import rustedWallTab from'../../images/tab/tab-3.jpg';
+import useIsMd from "../common/useIsMd";
 import { FacebookIcon, TwitterIcon } from "../common/Icons";
 
 const featuredItems = [
@@ -41,12 +42,10 @@ const featuredItems = [
 ]
 
 function FeaturedItems() {
-    return ( 
-        <>
-            <div className="d-none d-md-block"><FeaturedItemsTabs items={featuredItems}/></div>
-            <div className="d-md-none"><FeaturedItemsAccordions items={featuredItems}/></div>
-        </>
-    );
+    const isMd = useIsMd();
+    return isMd ? 
+        ( <FeaturedItemsTabs items={featuredItems}/> )
+        : ( <FeaturedItemsAccordions items={featuredItems}/> );
 };
 
 function FeaturedItemsTabs(props) {
