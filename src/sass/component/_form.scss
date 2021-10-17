@@ -1,25 +1,25 @@
 .form-control {
-    border-color: getColor(secondary);
-  }
+  border-color: $white;
+}
 
 .contact-form .input-group-text {
-    border: none;
-    background-color: getColor(patch);
-    color: getColor(secondary);
+  border: none;
+  background-color: $patch;
+  color: $white;
 }
 
 .input-group-text {
-  background-color: getColor(text-primary);
+  background-color: $secondary;
   border: none;
 }
 
-.form-check{
+.form-check {
   display: flex;
   align-items: center;
   padding-left: 0;
 
   .form-check-input {
-    background-color: getColor(theme);
+    background-color: $primary;
     flex: 0 0 auto;
     border: none;
     margin: 0 1em 0 0;
@@ -29,13 +29,11 @@
 }
 
 .contact-form {
-  background-color: getColor(tertiary);
+  background-color: $light;
   box-shadow: getShadow(shadow-light);
-  padding: 30px;
+  padding: $smMargin;
 
   @include media-breakpoint-up(md) {
-    margin-left: 75px;
-    padding: 30px;
+    margin-left: $mdMargin;
   }
-
 }

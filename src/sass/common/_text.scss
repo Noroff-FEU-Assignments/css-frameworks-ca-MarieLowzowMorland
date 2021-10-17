@@ -1,30 +1,30 @@
 body {
-    font-family: getFont(font-primary);
-    color: getColor(text-primary);
+  font-family: getFont(font-primary);
+  color: $secondary;
 }
 
-h1, 
+h1,
 .theme-heading {
-    color: getColor(theme);
-    font-family: getFont(font-secondary);
-    font-size: 34px;
-    margin: 40px 0 20px;
+  color: $primary;
+  font-family: getFont(font-secondary);
+  font-size: 34px;
+  margin: 40px 0 20px;
 }
 
 .navbar-light .navbar-brand {
-    color: getColor(theme);
-    font-family: getFont(font-secondary);
-    font-style: italic;
+  color: $primary;
+  font-family: getFont(font-secondary);
+  font-style: italic;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 
-    &:hover {
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .hoverable svg:hover path {
-    fill: $primary;
+  fill: $primary;
 }

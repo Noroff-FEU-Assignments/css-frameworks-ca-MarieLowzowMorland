@@ -1,73 +1,68 @@
-.tab-content {
-    background-color: getColor(secondary);
-    padding-top: 20px;
-    border-radius: 0 10px 10px 10px;
-}
+.featured-items-box {
+  margin-top: 35px;
 
-.accordion-header button {
-    color: getColor(theme);
-}
+  .social-media-share {
+    color: $black;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
 
-.accordion-button::after {
-    display: none;
-}
-
-.accordion-button:not(.collapsed) {
-    background-color: getColor(secondary);
-    border-bottom: 1px solid #d2215f;
-    box-shadow: none;
-}
-
-.accordion-body {
-    padding: 1rem 0;
-    background-color: getColor(tertiary);
-}
-
-.accordion-item:last-of-type .accordion-body{
+  .accordion {
+    box-shadow: getShadow(shadow-dark);
     border-bottom-right-radius: $accordion-border-radius;
     border-bottom-left-radius: $accordion-border-radius;
-}
 
-.featured-items-box {
-    margin-top: 35px;
-
-
-    .social-media-share {
-        color: $black;
-        text-transform: uppercase;
-        display: flex;
-        align-items: center;
-        margin-bottom: 0;
+    .accordion-header button {
+        color: $primary;
     }
 
-    .accordion {
-        box-shadow: getShadow(shadow-dark);
+    .accordion-button::after {
+        display: none;
+    }
+
+    .accordion-button:not(.collapsed) {
+        background-color: $white;
+        border-bottom: 1px solid #d2215f;
+        box-shadow: none;
+    }
+
+    .accordion-body {
+        padding: 1rem 0;
+        background-color: $light;
+    }
+
+    .accordion-item:last-of-type .accordion-body {
         border-bottom-right-radius: $accordion-border-radius;
         border-bottom-left-radius: $accordion-border-radius;
-
-        .social-media-share {
-            justify-content: center;
-        }
     }
 
-    .nav-tabs {
-        border: none;
-
-        .nav-link {
-            padding: 0.5rem 2.5rem;
-            color: $primary;
-            border-top-left-radius: $accordion-border-radius;
-            border-top-right-radius: $accordion-border-radius;
-
-            &.active {
-                color: getColor(text-primary);
-            }
-        }
+    .social-media-share {
+      justify-content: center;
     }
+  }
 
-    .tab-content {
-        border: 1px solid $nav-tabs-border-color;
-        box-shadow: getShadow(shadow-dark);
-        padding: 2rem 2.5rem;
+  .nav-tabs {
+    border: none;
+
+    .nav-link {
+      padding: 0.5rem 2.5rem;
+      color: $primary;
+      border-top-left-radius: $accordion-border-radius;
+      border-top-right-radius: $accordion-border-radius;
+
+      &.active {
+        color: $secondary;
+      }
     }
+  }
+
+  .tab-content {
+    background-color: $white;
+    border-radius: 0 $accordion-border-radius $accordion-border-radius $accordion-border-radius;
+    border: 1px solid $nav-tabs-border-color;
+    box-shadow: getShadow(shadow-dark);
+    padding: 2rem 2.5rem;
+  }
 }

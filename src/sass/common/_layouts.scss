@@ -37,21 +37,21 @@ main {
 }
 
 .container-fluid {
-  --bs-gutter-x: 30px;
+  --bs-gutter-x: #{$smMargin};
 }
 
 .px-075 {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: $smMargin;
+  padding-right: $smMargin;
 }
 
-@include media-breakpoint-up(md){
+@include media-breakpoint-up(md) {
   .container-fluid {
-    --bs-gutter-x: 75px;
+    --bs-gutter-x: #{$mdMargin};
   }
 
   .px-075 {
-    padding-left: 75px;
-    padding-right: 75px;
+    padding-left: $mdMargin;
+    padding-right: $mdMargin;
   }
 }
