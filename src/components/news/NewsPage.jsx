@@ -90,9 +90,9 @@ function NewsPage() {
     return (
         <PageLayout currentPage={pages.NEWS.name}>
             <Container fluid>
-                <h1>News</h1>
+                <h1 className="news-header">News</h1>
                 <NewsControl active={active} />
-                <Row xs={1} md={4} className="g-4">
+                <Row xs={1} md={2} xl={4} className="g-5 g-md-4 news-cards">
                     {itemsToShow.map((newsItem, i) => (
                         <Col key={"newsitem-"+i}>
                             <CardItem newsItem={newsItem}/>
@@ -108,17 +108,17 @@ function NewsPage() {
 function CardItem(props) {
     const { title, summary, image, altText } = props.newsItem;
     return (
-        <Card>
-            <CardImg variant="top" src={image} alt={altText} />
+        <Card as="article" className="d-flex flex-column-reverse">
             <Card.Body>
-                <Card.Title>{title}</Card.Title>
+                <Card.Title as="h2">{title}</Card.Title>
                 <Card.Text>{summary}</Card.Text>
 
                 <InputGroup className="mb-2 full-width d-flex">
-                    <Button variant="primary" className="flex-grow-1">More</Button>
+                    <Button variant="primary" className="flex-grow-1">MORE</Button>
                     <InputGroup.Text></InputGroup.Text>
                 </InputGroup>
             </Card.Body>
+            <CardImg variant="top" src={image} alt={altText} />
         </Card>
     );
 }

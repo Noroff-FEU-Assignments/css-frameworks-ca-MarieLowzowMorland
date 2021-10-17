@@ -41,11 +41,16 @@ const featuredItems = [
     }
 ]
 
-function FeaturedItems() {
+function FeaturedItems(props) {
     const isMd = useIsMd();
-    return isMd ? 
-        ( <FeaturedItemsTabs items={featuredItems}/> )
-        : ( <FeaturedItemsAccordions items={featuredItems}/> );
+
+    return (
+        <div className={props.className}>
+            {isMd ?
+                <FeaturedItemsTabs items={featuredItems} />
+                : <FeaturedItemsAccordions items={featuredItems} />}
+        </div>
+    );
 };
 
 function FeaturedItemsTabs(props) {
@@ -73,17 +78,17 @@ function FeaturedItemTabContent(props) {
     const { text, image, altText } = props.item;
 
     return ( 
-        <Container className="m-3">
-            <Row>
-                <Col xs={3}>
-                    <Image src={image} alt={altText} fluid/>
-                </Col>
-                <Col xs={9}>
-                    <p>{text}</p>
+        <Row>
+            <Col xs={3}>
+                <Image src={image} alt={altText} fluid/>
+            </Col>
+            <Col xs={9}>
+                <div className="d-flex flex-column full-height">
+                    <p className="flex-grow-1">{text}</p>
                     <ShareSocialMedia item={props.item} />
-                </Col>
-            </Row>
-        </Container>
+                </div>
+            </Col>
+        </Row>
     );
 };
 
@@ -124,16 +129,17 @@ function ShareSocialMedia(props) {
     const { fbShareLink, twShareLink } = props.item;
 
     return (
-        <p className={props.className}>Share: 
+        <p className={props.className + " social-media-share mt-4"}>Share 
             <a  href={fbShareLink} 
                 rel="noopener" 
-                className="mx-3"
+                className="mx-4 hoverable"
                 aria-label="Share on facebook"
             >
                 <FacebookIcon />
             </a>
             <a  href={twShareLink} 
                 rel="noopener"
+                className="hoverable"
                 aria-label="Share on Twitter">
                 <TwitterIcon />
             </a>

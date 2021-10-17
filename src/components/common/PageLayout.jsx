@@ -6,13 +6,13 @@ function PageLayout(props) {
     document.title = currentPage + " | The YAY Company";
 
     return (
-        <>
+        <div id={`page-${currentPage}`} className="page-layout">
             <Header/>
             <main>
                 {children}
             </main>
             <Footer/>
-        </>
+        </div>
     );
 }
 

@@ -1,7 +1,12 @@
+@import "./common/_variables.scss";
 @import "~bootstrap/scss/bootstrap.scss";
-@import "./common/layouts.scss";
-
-.px-075{
-  padding-left: ($spacer * .75) !important;
-  padding-right: ($spacer * .75) !important;
-}
+@import "./component/_header.scss";
+@import "./component/_footer.scss";
+@import "./common/_layouts.scss";
+@import "./common/_text.scss";
+@import "./component/_featuredItems.scss";
+@import "./component/_form.scss";
+@import "./component/_pagination.scss";
+@import "./component/_carousel.scss";
+@import "./pages/_news.scss";
+@import "./pages/_contact.scss";

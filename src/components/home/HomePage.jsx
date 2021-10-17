@@ -17,7 +17,8 @@ function HomePage() {
                 <BannerCarousel/>
             </section>
             <Container fluid>
-                <FeaturedItems/>
+                    <h2 className="visually-hidden">Featured Items</h2>
+                    <FeaturedItems className="featured-items-box"/>
             </Container>
         </PageLayout>
     );

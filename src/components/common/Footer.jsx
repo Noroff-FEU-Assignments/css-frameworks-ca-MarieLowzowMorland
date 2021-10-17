@@ -11,14 +11,14 @@ function Footer() {
                     <Col xs={12} md={4} className="text-center text-md-start">
                         <a  href="https://vimeo.com/" 
                             rel="noopener" 
-                            className="me-4"
+                            className="me-4 hoverable"
                             aria-label="Go to our Vimeo page"
                         >
                             <VimeoIcon />
                         </a>
                         <a  href="https://www.youtube.com/"
                             rel="noopener" 
-                            className="me-4"
+                            className="me-4 hoverable"
                             aria-label="Go to our Youtube channel"
                         >
                             <YouTubeIcon />

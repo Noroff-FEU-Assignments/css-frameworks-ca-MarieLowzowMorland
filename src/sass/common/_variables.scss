@@ -1,0 +1,60 @@
+$primary: #e92569;
+$secondary: #767676;
+$light: #efefef;
+$dark: #0A0A0A;
+$navbar-light-color: $dark;
+$navbar-light-active-color: $dark;
+
+$accordion-border-radius: 10px;
+$--bs-body-color: #767676;
+$min-contrast-ratio: 4.25; 
+/* 
+    Kinda surprising that once again, we are instructed to 
+    create a website design that doesn't abide by norwegian law.
+    This time around one has to explicitly tell bootstrap to 
+    lessen its contrast demands to be below the WCAG 2.0 
+    minimum requirement...  -_-
+*/
+
+$colors: (
+    "primary": #F4F3EE,
+    "secondary": #fff,
+    "tertiary": #efefef,
+    "theme": #e92569,
+
+    "patch": #C7C7C7,
+
+    "text-primary": #767676,
+    "text-links": #0a0a0a,
+    
+);
+
+@function getColor($color) {      
+    @return map-get($colors, $color);
+}
+
+$gradients: (
+    "background": radial-gradient(#FFFF, #E5E5E5)
+);
+
+@function getGradient($gradient) {      
+    @return map-get($gradients, $gradient);
+};
+
+$shadows: (
+    "shadow-light": 0px 6px 10px #00000029,
+    "shadow-dark": 0px 16px 22px #00000029,
+);
+
+@function getShadow($shadow) {      
+    @return map-get($shadows, $shadow);
+};
+
+$fonts: (
+    "font-primary": ('Lato', sans-serif),
+    "font-secondary": ('Playfair Display', serif),
+);
+
+@function getFont($font) {      
+    @return map-get($fonts, $font);
+}

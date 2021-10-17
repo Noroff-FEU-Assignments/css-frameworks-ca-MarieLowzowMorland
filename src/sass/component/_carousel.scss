@@ -1,0 +1,13 @@
+.carousel-indicators [data-bs-target] {
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+    opacity: 1;
+    border: 1px;
+    border-radius: 2px;
+    box-shadow: getShadow(shadow-dark);
+}
+
+.carousel-indicators .active {
+    background-color: getColor(theme);
+}

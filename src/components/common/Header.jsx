@@ -52,20 +52,22 @@ function Header() {
                     <NavbarBrand href="/">The YAY Company</NavbarBrand>
                     <NavbarToggle aria-controls="basic-navbar-nav"/>
                     <NavbarCollapse id="basic-navbar-nav">
-                        <Nav as="ul" className="me-auto">
-                            <Link page={pages.HOME}/>
-                            <Link page={pages.NEWS}/>
-                            <Link page={pages.CONTACT}/>
-                        </Nav>
-                        <Form className="d-flex">
-                            <InputGroup className="mb-2 full-width d-flex">
-                                <FormGroup controlId="nav-search">
-                                    <FormLabel visuallyHidden>Search</FormLabel>
-                                    <FormControl type="text" placeholder="Search"/>
-                                </FormGroup>
-                                <Button type="submit">Go</Button>
-                            </InputGroup>
-                        </Form>
+                        <div className="nav-body">
+                            <Nav as="ul" className="me-auto">
+                                <Link page={pages.HOME}/>
+                                <Link page={pages.NEWS}/>
+                                <Link page={pages.CONTACT}/>
+                            </Nav>
+                            <Form className="d-flex">
+                                <InputGroup className="full-width d-flex">
+                                    <FormGroup controlId="nav-search">
+                                        <FormLabel visuallyHidden>Search</FormLabel>
+                                        <FormControl type="text" placeholder="Search"/>
+                                    </FormGroup>
+                                    <Button type="submit">Go</Button>
+                                </InputGroup>
+                            </Form>
+                        </div>
                     </NavbarCollapse>
                 </Container>
             </Navbar>

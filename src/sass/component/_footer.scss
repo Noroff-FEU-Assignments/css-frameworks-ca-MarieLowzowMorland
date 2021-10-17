@@ -1,0 +1,25 @@
+footer {
+    background-color: getColor(secondary);
+    padding: 5px;
+    padding-top: 20px;
+    margin-top: 100px;
+  
+    a {
+      color: getColor(text-primary);
+    }
+
+    svg {
+      height: 25px;
+    }
+
+    .row > div {
+        margin: 1rem 0;
+    }
+
+    @include media-breakpoint-up(md) {
+        .row > div {
+            margin: 0;
+        }
+    }
+}
+  

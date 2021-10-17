@@ -1,7 +1,16 @@
-#root {
+.page-layout {
   flex-direction: column;
   display: flex;
   min-height: 100vh;
+}
+
+body {
+  background-image: getGradient("background");
+}
+
+svg {
+  max-width: 35px;
+  max-height: 35px;
 }
 
 header,
@@ -15,6 +24,34 @@ main {
   width: 100%;
 }
 
+.row {
+  max-width: 100%;
+}
+
 .full-width {
   width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.container-fluid {
+  --bs-gutter-x: 30px;
+}
+
+.px-075 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@include media-breakpoint-up(md){
+  .container-fluid {
+    --bs-gutter-x: 75px;
+  }
+
+  .px-075 {
+    padding-left: 75px;
+    padding-right: 75px;
+  }
 }

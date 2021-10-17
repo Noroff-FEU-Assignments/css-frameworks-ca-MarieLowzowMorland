@@ -1,0 +1,73 @@
+header {
+    background-color: getColor(tertiary);
+
+    .navbar-light .navbar-toggler {
+        border: none;
+    }
+
+    form {
+        margin: 40px -20px;
+
+        .input-group > div:first-child {
+            flex: 1 0 50%;
+        }
+    }
+
+    .navbar-light {
+        .nav-body{
+            position: absolute;
+            z-index: 1000;
+            width: 100%;
+            background-color: getColor(tertiary);
+            padding: 0 50px;
+            margin: 0.5rem -30px;
+            box-shadow: getShadow(shadow-light);
+        }
+
+        .navbar-nav .nav-link {
+
+            &:hover, 
+            &.active {
+                padding: 0.5rem 50px;
+                margin: 0 -50px;
+                background-color: getColor(secondary);
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        form {
+            margin: 0px;
+        }
+
+        .navbar-light{
+
+            .navbar-nav {
+                align-items: center;
+            
+                .nav-link{ 
+                    padding: 0 0.75rem;
+                    margin: 0 1px;
+
+                    &:hover, 
+                    &.active {
+                        padding: 0 0.75rem;
+                        margin: 0 1px;
+                        border-radius: 3px;
+                        background-color: getColor(secondary);
+                    }
+                }
+            }
+
+            .nav-body{
+                position: static;
+                display: flex;
+                flex-grow: 1;
+                padding: 0;
+                margin: 0;
+                margin-left: 24px;
+                box-shadow: none;
+            }
+        }
+    }
+}

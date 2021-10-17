@@ -1,0 +1,26 @@
+#page-News{
+    .news-header {
+        margin: 36px 0;
+    }
+
+    .news-cards {
+        margin-top: 0;
+        margin-bottom: 60px;
+
+        .card-body {
+            padding: 1rem 30px;
+            box-shadow: getShadow(shadow-light);
+
+            bottom {
+                padding: 0.75rem;
+            }
+        }
+    }
+
+
+    @include media-breakpoint-up(md) {
+        .news-cards {
+            margin-top: 20px;
+        }
+    } 
+}

@@ -1,0 +1,35 @@
+#page-Contact{
+    .theme-heading {
+        margin-left: 30px;
+    }
+
+    .contact-info {
+        margin-top: 40px;
+    }
+
+    .icon-wrapper {
+        display: inline-flex;
+        justify-content: center;
+        vertical-align: middle;
+        width: 35px;
+        min-width: 35px;
+    }
+
+    .row {
+        margin: 0px;
+    }
+
+    .row > div {
+        padding: 0px;
+    }
+
+    @include media-breakpoint-up(md) {
+        .theme-heading {
+            margin-left: 75px;
+        }
+
+        .contact-info {
+            margin-top: 100px;
+        }
+    }
+}

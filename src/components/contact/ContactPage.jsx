@@ -9,38 +9,47 @@ import Form from 'react-bootstrap/Form';
 import FormCheck from 'react-bootstrap/FormCheck';
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
+import useIsMd from "../common/useIsMd";
 
 import { EnvelopeIcon, MapMarkerIcon, PhoneIcon } from "../common/Icons";
 
 function ContactPage() {
+    const isMd = useIsMd();
+    const websiteInput = <FormControl type="text" />;
+    const websiteInputGroup = isMd ? 
+        <InputGroup className="mb-2">
+            <InputGroup.Text className="d-none d-md-flex">https://</InputGroup.Text>
+            { websiteInput }
+        </InputGroup> 
+        : websiteInput;
+
+
     return ( 
         <PageLayout currentPage={pages.CONTACT.name}>
             <h1 className="visually-hidden">Contact</h1>
             <Row>
                 <Col xs={12} md={{span:6,order:1}}>
-                    <div className="px-075">
+                    <div className="px-075 contact-info">
                         <h2 className="visually-hidden">Contact us</h2>
                         <Row xs={1} className="gx-0 gy-3">
                             <Col>
-                                <EnvelopeIcon/>
-                                <a href="mailto:hello@yay.com" className="ms-4">hello@yay.com</a>
+                                <div className="icon-wrapper"><EnvelopeIcon/></div>
+                                <a href="mailto:hello@yay.com" className="ms-4 text-secondary">hello@yay.com</a>
                             </Col>
                             <Col>
-                                <PhoneIcon/>
+                                <div className="icon-wrapper"><PhoneIcon/></div>
                                 <p className="ms-4 d-inline-block">123 456 7890</p>
                             </Col>
                             <Col>
-                                <MapMarkerIcon/>
+                                <div className="icon-wrapper"><MapMarkerIcon/></div>
                                 <p className="ms-4 d-inline-block align-top">123 Some Street<br/>Somewhere<br/>Some City<br/>10000</p>
                             </Col>
                         </Row>
                     </div>
                 </Col>
                 <Col xs={12} md={6}>
-                    <div className="px-075">
-                        <h2>Submit your details</h2>
-                    </div>
-                    <Form  className="px-075">
+                    <h2 className="theme-heading">Submit your details</h2>
+                    <Form  className=" contact-form">
                         <FormGroup className="mb-3" controlId="formName">
                             <FormLabel>Name</FormLabel>
                             <FormControl type="text"/>
@@ -53,10 +62,7 @@ function ContactPage() {
 
                         <FormGroup className="mb-3" controlId="formWebsite">
                             <FormLabel>Website</FormLabel>
-                            <InputGroup className="mb-2">
-                                <InputGroup.Text>https://</InputGroup.Text>
-                                <FormControl type="text" />
-                            </InputGroup>
+                            { websiteInputGroup }
                         </FormGroup>
                         
                         <FormGroup className="mb-3" controlId="exampleForm.ControlTextarea1">
@@ -65,9 +71,9 @@ function ContactPage() {
                         </FormGroup>
 
                         <FormGroup className="mb-3" controlId="formBasicCheckbox">
-                            <FormCheck type="checkbox" label="Check Allow us to sell your personal details to whomever we want out" />
+                            <FormCheck type="checkbox" label="Allow us to sell your personal details to whomever we want out" />
                         </FormGroup>
-                        <Button variant="primary" type="submit" className="full-width">
+                        <Button variant="secondary" size="lg" type="submit" className="full-width">
                             Submit
                         </Button>
                     </Form>

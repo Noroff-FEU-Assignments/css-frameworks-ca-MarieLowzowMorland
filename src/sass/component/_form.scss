@@ -1,0 +1,41 @@
+.form-control {
+    border-color: getColor(secondary);
+  }
+
+.contact-form .input-group-text {
+    border: none;
+    background-color: getColor(patch);
+    color: getColor(secondary);
+}
+
+.input-group-text {
+  background-color: getColor(text-primary);
+  border: none;
+}
+
+.form-check{
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+
+  .form-check-input {
+    background-color: getColor(theme);
+    flex: 0 0 auto;
+    border: none;
+    margin: 0 1em 0 0;
+    width: 2em;
+    height: 2em;
+  }
+}
+
+.contact-form {
+  background-color: getColor(tertiary);
+  box-shadow: getShadow(shadow-light);
+  padding: 30px;
+
+  @include media-breakpoint-up(md) {
+    margin-left: 75px;
+    padding: 30px;
+  }
+
+}
