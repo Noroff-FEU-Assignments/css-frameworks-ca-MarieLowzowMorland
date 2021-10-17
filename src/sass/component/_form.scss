@@ -2,12 +2,6 @@
   border-color: $white;
 }
 
-.contact-form .input-group-text {
-  border: none;
-  background-color: $patch;
-  color: $white;
-}
-
 .input-group-text {
   background-color: $secondary;
   border: none;
@@ -25,15 +19,5 @@
     margin: 0 1em 0 0;
     width: 2em;
     height: 2em;
-  }
-}
-
-.contact-form {
-  background-color: $light;
-  box-shadow: getShadow(shadow-light);
-  padding: $smMargin;
-
-  @include media-breakpoint-up(md) {
-    margin-left: $mdMargin;
   }
 }

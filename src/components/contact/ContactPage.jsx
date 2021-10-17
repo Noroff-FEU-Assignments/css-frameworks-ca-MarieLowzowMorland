@@ -18,7 +18,7 @@ function ContactPage() {
     const websiteInput = <FormControl type="text" />;
     const websiteInputGroup = isMd ? 
         <InputGroup className="mb-2">
-            <InputGroup.Text className="d-none d-md-flex">https://</InputGroup.Text>
+            <InputGroup.Text>https://</InputGroup.Text>
             { websiteInput }
         </InputGroup> 
         : websiteInput;
